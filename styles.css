@@ -1,0 +1,214 @@
+html {
+  /*overflow-x: hidden;*/
+  scroll-behavior: smooth;
+  
+}
+
+
+:root {
+  --typingDuration: 3.4s;
+  --typedCharacters: 15;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Source Code Pro', monospace;
+}
+
+
+body {
+    text-align: center;
+}
+
+section {
+  border: solid black 1px;
+}
+
+
+
+
+.nav-bar {
+  margin-top: 20px;
+    /* border: solid black 1px; */
+}
+
+
+ul  {
+  list-style-type: none;
+}
+
+
+nav ul a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 20s;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 4.1s);
+
+  
+
+}
+
+nav a {
+  color:rgb(72, 72, 189);
+  
+}
+
+
+nav a:hover {
+  text-decoration: underline;
+  color: whitesmoke;
+}
+
+
+.hero-section {
+  font-family: 'Source Code Pro', monospace;
+  height: 100vh;
+  background-color: #2b9348;
+  color: whitesmoke;
+  font-size: 38px;
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+
+  /* position: sticky; */
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: .5em;
+  background-color: transparent;
+}
+
+.about-me-section {
+  height: 100vh;
+  background-color: whitesmoke;
+  color: rgb(24, 4, 4);
+  font-size: 38px;
+  background-color: #ad1818
+}
+
+
+
+.projects-section {
+  height: 100vh;
+  color: whitesmoke;
+  font-size: 38px;
+  position: relative;
+  background-color: #000000;
+}
+
+.projects-section::before{
+  content: "";
+  background-image: url("IMAGES/coding_screen_small.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.25;
+
+}
+
+.skillset-section {
+  height: 100vh;
+  background-color: whitesmoke;
+  color: rgb(24, 4, 4);
+  font-size: 38px;
+}
+
+
+.contact-me-section {
+  height: 100vh;
+  background-color: #000000;
+  color: whitesmoke;
+  font-size: 38px;
+}
+
+#typed-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 74px;; */
+  
+}
+
+h1 {
+  position: relative;
+  /* font-family: 'Source Code Pro', monospace; */
+  width: max-content;
+  /* border: solid black 1px; */
+  font-weight: 200;
+  margin-top: 10vh;
+  margin-bottom: 6vh;
+}
+
+h1::before, h1::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+}
+
+h1::before {
+  background: #2b9348;
+  animation: typing var(--typingDuration) steps(var(--typedCharacters)) 1.7s forwards;
+}
+
+h1::after {
+  width: 0.04em;
+  background:whitesmoke;
+  animation: typing var(--typingDuration) steps(var(--typedCharacters)) 1.7s forwards,
+  cursor 750ms infinite;
+  
+}
+
+h2 {
+  margin-top: 2vh;
+  margin-bottom: 8vh;
+  font-weight: 300;
+}
+
+#intro-text {
+  opacity: 0;
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 2.7s);
+  /* border: solid black 1px; */
+  font-weight: 200;
+  margin-bottom: 2vh;
+}
+
+#svg8 {
+  opacity: 0;
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 2.7s);
+
+}
+
+@keyframes typing {
+  to { 
+    left: 100%
+  }
+}
+
+@keyframes cursor {
+  to {
+    background: transparent
+  }
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1
+  }
+}
