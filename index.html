@@ -8,11 +8,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="hero-section" id="hero">
+   <section class="hero-section" id="hero">
         <nav class="nav-bar">
             <ul class="nav-items">
                 <li><a href="#about">About me</a></li>
@@ -171,15 +171,36 @@
          </g>
        </g>
      </svg>
-    </section>
-    <section class="about-me-section" id="about">
-        <h2>About-me</h2></section>
-    <section class="projects-section" id="projects">
-        <h2>Projects</h2></section>
-    <section class="skillset-section" id="skillset">
-        <h2>Skillset</h2></section>
-    <section class="contact-me-section" id="contact">
-        <h2>Contact me</h2></section>
+   </section>
+   <section class="about-me-section" id="about">
+        <h2>About me</h2>
+        <img src="IMAGES/kona_surf_session.jpg" id="kona-pic" height="300px" alt="me-surfing">
+   </section>
+   <section class="projects-section" id="projects">
+        <h2>Coding Projects</h2>
+   </section>
+   <section class="skillset-section" id="skillset">
+        <h2>Development Skillset</h2>
+   </section>
+   <footer class="contact-me-section" id="contact">
+        <h2>Contact me</h2>
+         <div class="form-container">
+            <form class="contact-form" action="https://formsubmit.co/mickycarey@gmail.com" method="POST">
+               <input type="hidden" name="_captcha" value="false">
+               <input type="hidden" name="_subject" value="Portfoilo Responnse">
+               <label for="response-name">Name</label>
+               <input type="text" name="name" id="response-name" required>
+               <label for="email-field">Email</label>
+               <input type="email" name="email" id="email-field" required>
+               <label for="message-text">Message</label>
+               <textarea  class="form-control" name="message" rows="10" required></textarea>
+               <input type="hidden" name="_captcha" value="false">
+               <div class="submit-btn-div">
+                  <button type="submit" id="submit-button">Submit</button>
+               </div>
+            </form>
+        </div>
+   </footer>
     
 </body>
 </html>

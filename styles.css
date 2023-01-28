@@ -24,16 +24,15 @@ body {
     text-align: center;
 }
 
-section {
-  border: solid black 1px;
+section, footer {
+  font-size: 2rem;
+  
 }
 
 
-
-
 .nav-bar {
-  margin-top: 20px;
-    /* border: solid black 1px; */
+  padding-top: 3vh;
+
 }
 
 
@@ -44,13 +43,9 @@ ul  {
 
 nav ul a {
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: background-color 20s;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   opacity: 0;
   animation: fade-in 3s ease forwards calc(var(--typingDuration) + 4.1s);
-
-  
 
 }
 
@@ -71,7 +66,7 @@ nav a:hover {
   height: 100vh;
   background-color: #2b9348;
   color: whitesmoke;
-  font-size: 38px;
+  font-size: 2.7rem;
   text-align: center;
 }
 
@@ -88,52 +83,6 @@ nav a:hover {
   background-color: transparent;
 }
 
-.about-me-section {
-  height: 100vh;
-  background-color: whitesmoke;
-  color: rgb(24, 4, 4);
-  font-size: 38px;
-  background-color: #ad1818
-}
-
-
-
-.projects-section {
-  height: 100vh;
-  color: whitesmoke;
-  font-size: 38px;
-  position: relative;
-  background-color: #000000;
-}
-
-.projects-section::before{
-  content: "";
-  background-image: url("IMAGES/coding_screen_small.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.25;
-
-}
-
-.skillset-section {
-  height: 100vh;
-  background-color: whitesmoke;
-  color: rgb(24, 4, 4);
-  font-size: 38px;
-}
-
-
-.contact-me-section {
-  height: 100vh;
-  background-color: #000000;
-  color: whitesmoke;
-  font-size: 38px;
-}
-
 #typed-container {
   width: 100vw;
   display: flex;
@@ -148,8 +97,8 @@ h1 {
   width: max-content;
   /* border: solid black 1px; */
   font-weight: 200;
-  margin-top: 10vh;
-  margin-bottom: 6vh;
+  margin-top: 14vh;
+  margin-bottom: 2vh;
 }
 
 h1::before, h1::after {
@@ -176,9 +125,10 @@ h1::after {
 }
 
 h2 {
-  margin-top: 2vh;
+  padding-top: 2vh;
   margin-bottom: 8vh;
   font-weight: 300;
+  
 }
 
 #intro-text {
@@ -191,9 +141,129 @@ h2 {
 
 #svg8 {
   opacity: 0;
-  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 2.7s);
+  animation: fade-in 3s ease forwards calc(var(--typingDuration) + 3.3s);
 
 }
+
+.about-me-section {
+  height: 140vh;
+  background-color: #020218ef;
+  color: whitesmoke;
+  
+  border-top: solid whitesmoke 2px;
+  /* background-color: #721010 */
+}
+
+#kona-pic {
+  border: solid black 1px;
+  border-radius: 10% 10%;
+}
+
+
+.projects-section {
+  height: 100vh;
+  color: whitesmoke;
+  background-color: #2b9348;
+  border-top: solid whitesmoke;
+  border-bottom: solid white 4px;
+}
+
+/* .projects-section::before{
+  content: "";
+  background-image: url("IMAGES/coding_screen_small.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.1;
+
+} */
+
+.skillset-section {
+  height: 100vh;
+  background-color: rgb(202, 202, 202);
+  color: #2b9348;
+  border-bottom: solid white 4px;
+ 
+}
+
+.skillset-section h2 {
+  font-weight: 400;
+}
+
+.contact-me-section {
+  height: 100vh;
+  background-color: #2b9348;
+  color: whitesmoke;
+  
+ 
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px rgb(17, 8, 3);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+/* .contact-form {
+  width: 22vw;
+} */
+
+input[type=text], input[type=email], textarea {
+  border: solid;
+  border-style: inset;
+  width: 100%;
+  background-color: rgb(202, 202, 202);
+  font-size: 60%;
+  padding-left: 4px;
+ 
+}
+
+
+
+textarea {
+  border: solid;
+  border-style: inset;
+  resize: none;
+  height: 24vh;
+
+}
+
+textarea:focus-visible,
+input[type=text]:focus-visible,
+input[type=email]:focus-visible {
+  outline: none;
+}
+
+label {
+  font-size: .8rem;
+  color: inherit;
+}
+
+.submit-btn-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#submit-button {
+  padding: 4px 20px;
+  border-radius: .4em;
+  color: white;
+  border: solid rgba(3, 80, 3, 0.658) 1px;
+  background-color: #185328b4;
+  font-weight: 300;
+}
+
+
 
 @keyframes typing {
   to { 
