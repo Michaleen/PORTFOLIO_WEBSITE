@@ -9,10 +9,13 @@ html {
   --typingDuration: 3.4s;
   --typedCharacters: 15;
   --deepOcean: #020218ef;
+  --deepOcean: #090952ef;
   --marksAndSparksGreen: #2b9348;
   --silverFox: rgb(202, 202, 202);
   --gandalfTheGrey: rgb(163, 163, 167);
-  --cardWidth: 20vw;
+  --cardWidth: 260px;
+  --green-gradient: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
+  --accordian : var(--deepOcean);
 }
 
 
@@ -55,21 +58,35 @@ nav ul a {
 }
 
 nav a {
-  color:rgb(72, 72, 189);
+  color:rgb(47, 47, 238);
+  
   
 }
 
 
 nav a:hover {
   /* text-decoration: underline; */
-  color: whitesmoke;
+  color: rgb(216, 62, 2);
+  cursor: pointer;
 }
 
 
 .hero-section {
   font-family: 'Source Code Pro', monospace;
   height: 100vh;
-  background-color: var(--marksAndSparksGreen);
+  background-image: linear-gradient(
+    110deg,
+    
+    #0e4d1f,
+    #14742e,
+    #268b43,
+    var(--marksAndSparksGreen),
+    var(--marksAndSparksGreen),
+    
+    var(--marksAndSparksGreen),
+    #268b43, 
+    #1d6430, 
+    #0c421b);
   color: whitesmoke;
   /* font-size: 2.7rem; */
   text-align: center;
@@ -117,7 +134,7 @@ h1::before, h1::after {
 }
 
 h1::before {
-  background: var(--marksAndSparksGreen);
+ background: var(--marksAndSparksGreen);
   animation: typing var(--typingDuration) steps(var(--typedCharacters)) 1.7s forwards;
 }
 
@@ -133,6 +150,7 @@ h2 {
   padding-top: 2vh;
   margin-bottom: 8vh;
   font-weight: 300;
+  text-shadow:  4px 4px 8px var(--deepOcean);
   
 }
 
@@ -147,15 +165,17 @@ h2 {
 #svg8 {
   opacity: 0;
   animation: fade-in 3s ease forwards calc(var(--typingDuration) + 3.3s);
+  width: 240px;
+  height: 240px;
 
 }
-
+/* -------------------------------------------- */
 .about-me-section {
   height: 140vh;
-  background-color: var(--deepOcean);
-  color: whitesmoke;
+  background-color: var(--silverFox);
+  /* color: whitesmoke; */
   
-  border-top: solid whitesmoke 2px;
+  border-top: solid whitesmoke 4px;
   /* background-color: #721010 */
 }
 
@@ -164,15 +184,25 @@ h2 {
   border-radius: 10% 10%;
 }
 
+/* ----------------------------------------------------------------------------------------------------------------------- */
+
 
 .projects-section {
   /* height: 100vh; */
-  color: whitesmoke;
-  background-color: #2b9348;
-  border-top: solid whitesmoke;
-  border-bottom: solid white 4px;
+color: whitesmoke;
+border: solid whitesmoke 4px;
+background-size: 200%;
+background-image: linear-gradient(110deg,#13612a, #15632c,#22522f,#268b43, #1d6430, #0c421b);
+background-color: var(--silverFox);
+animation: bg-animation 30s infinite;
+
 }
 
+@keyframes bg-animation {
+0% {background-position: left}
+50% {background-position: right}
+100% {background-position: left}
+}
 /* .projects-section::before{
   content: "";
   background-image: url("IMAGES/coding_screen_small.jpg");
@@ -186,8 +216,17 @@ h2 {
 
 } */
 
+.card-header {
+  padding: 20px;
+  border-bottom: solid black 2px;
+}
+
+.collapsible-container img {
+  margin-top: 12px;
+}
+
 .projects-section p {
-  background-color: var(--deepOcean);
+  background-image:#ffe4ac;
   color: var(--gandalfTheGrey);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -196,21 +235,22 @@ h2 {
 .all-collapsibles-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 10%;
+  margin-bottom: 8%;
 }
 
 .collapsible-container {
   width: var(--cardWidth);
-  box-shadow: 0px 0px 20px 2px whitesmoke;
-  /* border: solid var(--deepOcean) 1px; */
+  box-shadow: 3px 3px 30px 4px black;
+  border: solid black 2px;
 
 }
 
 .project-image-div {
   width: 100%;
-  background-color: var(--deepOcean);
+  background: black;
   display:flex;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .collapsible-container img {
@@ -219,8 +259,8 @@ h2 {
  
 }
 .collapsible {
-  background-color:var(--deepOcean);
-  color: var(--gandalfTheGrey);
+  color: #000000;
+  background-color:  var(--accordian);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -230,50 +270,222 @@ h2 {
   font-size: 15px;
 
 }
-
+.collapsible-container button {
+  border-top: solid black 1px;
+  border-radius: 5px;;
+}
 .active, .collapsible:hover {
-  background-color: #721111;
+  background: linear-gradient(110deg,#13612a, #15632c,#22522f,#268b43, #1d6430, #0c421b)
 }
 
 .content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #941e1e;
+  background-color: #ffe4ac;
   font-size: 1rem;
 }
 
-.project-links {
+.project-links-container {
   height:60px;
-  background-color: red;
+  background: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
+  display: flex;
 }
 
+.project-links-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 140px;
+}
 
+.project-links-wrap p {
+  background-color: red;
+  font-size: 10px;
 
+}
 
+.project-links-wrap a {
+  display: flex;
+  justify-content: center;
+}
 
+.project-page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
 
+.git-hub-project-icon {
+  cursor: pointer;
+}
+.project-page-link p {
+  font-size: 16px;
+  background-color: transparent;
 
+}
+
+/*--------------------------------------------------------------------------------------------------------- */
 
 .skillset-section {
-  /* height: 100vh; */
-  background-color: var(--gandalfTheGrey);
+  height: 100vh;
+  background-color: var(--silverFox);
   color:var(--marksAndSparksGreen);
   border-bottom: solid white 4px;
  
+}
+
+.skillset-section h5{
+  color: var(--deepOcean);
+  font-weight: 400;
+  /* font-size: 1.9rem; */
+  margin: 20px;
 }
 
 .skillset-section h2 {
   font-weight: 300;
 }
 
+.core-skills-icons-wrap {
+  /* display: flex; */
+ /* justify-content: end; */
+  /* width: 100%; */
+  margin-bottom: 80px;
+
+}
+
+.bike {
+  position:absolute;
+}
+
+#bike1 {
+  left: 14%;
+}
+
+#bike2 {
+  right:30%
+}
+
+.hid-bike {
+  opacity: 0;
+  transition: 2s
+}
+
+.reveal-bike {
+  opacity: 1;
+ 
+}
+
+.cruise-right  {
+  
+  /* filter: blur(0); */
+  transform: translateX(60vw);
+  transition: 3s;
+  /* transition-delay: 1s; */
+}
+
+.cruise-left  {
+  
+  /* filter: blur(0); */
+  transform: translateX(-30vw);
+  transition: 2s;
+  /* transition-delay: 1s; */
+}
+.bike-gone {
+  display: none;
+}
+
+
+
+
+
+
+.secondary-skills-icons-wrap {
+
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+
+}
+
+
+
+.skills-icons-div-top {
+  /* display: flex; */
+  justify-content: center;
+  margin-bottom: 2rem;
+  /* width: 80%; */
+}
+
+.skills-icons-div-bottom {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-bottom: 400px; */
+  /* width: 80%; */
+}
+
+
+.technology {
+  height: 80px;
+  padding: 0px 40px;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transition: 2s;
+
+}
+
+.skills1:nth-child(1){
+  transition-delay: 1.4s;
+}
+
+.skills1:nth-child(2){
+  transition-delay: 1.8s;
+}
+
+.skills1:nth-child(3){
+  transition-delay: 2.2s;
+}
+
+.skills1:nth-child(4){
+  transition-delay: 2.8s;
+}
+
+.skills2:nth-child(2){
+  transition-delay: 3.8s;
+}
+
+.skills2:nth-child(1){
+  transition-delay: 4.2s;
+}
+
+.skillset-section h5:nth-child(4) {
+  transition-delay: 2.4s;
+}
+.reveal {
+  opacity: 1;
+  filter: blur(0);
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------- */
+
 .contact-me-section {
   height: 100vh;
-  background-color: var(--marksAndSparksGreen);
+  background-image: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
   color: whitesmoke;
   
  
 }
+
 
 .form-container {
   display: flex;
@@ -334,10 +546,17 @@ label {
   border-radius: .4em;
   color: white;
   border: solid rgba(3, 80, 3, 0.658) 1px;
-  background-color: #185328b4;
+  background: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
   font-weight: 300;
+  cursor: pointer;
 }
 
+#submit-button:hover {
+  font-weight: 500;
+  color: #000000;
+  background: #25645a;
+  transition:  .3s;
+}
 
 
 @keyframes typing {
@@ -357,3 +576,4 @@ label {
     opacity: 1
   }
 }
+
