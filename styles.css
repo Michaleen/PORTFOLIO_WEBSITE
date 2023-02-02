@@ -16,7 +16,7 @@ html {
   --cardWidth: 260px;
   --green-gradient: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
   --accordian : rgb(14, 95, 61);
-  --silverGleam : linear-gradient(20deg, rgb(202, 202, 202),rgb(208, 208, 245),rgb(202, 202, 202),rgb(201, 201, 248),rgb(202, 202, 202),rgb(179, 179, 245),rgb(202, 202, 202),rgb(203, 203, 250));
+  --silverGleam : linear-gradient(20deg, rgb(202, 202, 202),rgb(208, 208, 245),rgb(202, 202, 202),rgb(201, 201, 248),rgb(202, 202, 202),rgb(179, 179, 245),rgb(202, 202, 202),rgb(203, 203, 250)) ;
 }
 
 
@@ -295,6 +295,7 @@ animation: bg-animation 30s infinite;
 .card-header {
   padding: 20px;
   border-bottom: solid black 2px;
+  background: linear-gradient(110deg,#13612a, #15632c,#22522f,#268b43, #1d6430, #0c421b)
 }
 
 .collapsible-container img {
@@ -336,7 +337,7 @@ animation: bg-animation 30s infinite;
 }
 .collapsible {
   color: #000000;
-  background-color:  var(--accordian);
+  background-color: var(--deepOcean);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -348,7 +349,7 @@ animation: bg-animation 30s infinite;
 }
 .collapsible-container button {
   border-top: solid black 1px;
-  border-radius: 5px;;
+  /* border-radius: 5px; */
 }
 .active, .collapsible:hover {
   background: linear-gradient(110deg,#13612a, #15632c,#22522f,#268b43, #1d6430, #0c421b)
@@ -555,11 +556,19 @@ animation: bg-animation 30s infinite;
   filter: blur(0);
 }
 
-.education-table {
-  height: 200px;
-  width: 60vw;
+th, td, tr {
+  border: solid var(--deepOcean) 1px;
+}
+.edu-table {
+  height: 100px;
+  width: 70vw;
   border: solid black 1px;
-  margin: 40px auto;
+  margin: 0px auto;
+  font-size: 1rem;
+  font-weight: 300;
+  color: --deepOcean;
+  margin-bottom: 100px;
+  margin-top: 20px;
 }
 
 
