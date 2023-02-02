@@ -15,7 +15,8 @@ html {
   --gandalfTheGrey: rgb(163, 163, 167);
   --cardWidth: 260px;
   --green-gradient: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
-  --accordian : var(--deepOcean);
+  --accordian : rgb(14, 95, 61);
+  --silverGleam : linear-gradient(20deg, rgb(202, 202, 202),rgb(208, 208, 245),rgb(202, 202, 202),rgb(201, 201, 248),rgb(202, 202, 202),rgb(179, 179, 245),rgb(202, 202, 202),rgb(203, 203, 250));
 }
 
 
@@ -73,7 +74,7 @@ nav a:hover {
 
 .hero-section {
   font-family: 'Source Code Pro', monospace;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(
     110deg,
     
@@ -147,7 +148,7 @@ h1::after {
 }
 
 h2 {
-  padding-top: 2vh;
+  padding-top: 2.2vh;
   margin-bottom: 8vh;
   font-weight: 300;
   text-shadow:  4px 4px 8px var(--deepOcean);
@@ -169,22 +170,97 @@ h2 {
   height: 240px;
 
 }
-/* -------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------------- */
 .about-me-section {
-  height: 140vh;
-  background-color: var(--silverFox);
+  min-height: 100vh;
+  background: var(--silverFox);
   /* color: whitesmoke; */
-  
-  border-top: solid whitesmoke 4px;
+
+  border-top: solid whitesmoke 6px;
   /* background-color: #721010 */
 }
 
-#kona-pic {
-  border: solid black 1px;
-  border-radius: 10% 10%;
+#about-me-heading {
+  margin-bottom: 1.9vh;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------- */
+.about-me-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.me-text-pic-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:78vw;
+  /* border: solid var(--deepOcean) 1px; */
+  border-radius: 8px;
+  min-height: 80vh;
+  padding: 40px 6px;
+  /* background-color: rgb(227, 227, 233);
+  background-color: #FFEECF; */
+  transform: rotate(-1deg);
+  /* box-shadow: 0px 0px 20px var(--deepOcean); */
+
+}
+
+.me-text-div {
+  height: 400px;
+  width: 50vw;
+  font-size: 1.1rem;
+  /* border: solid var(--deepOcean) 1px; */
+  border-radius: 8px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin-bottom: 20px; */
+  padding: 0px 80px;
+  background-color: rgb(227, 227, 233);
+  box-shadow: 0px 0px 20px var(--deepOcean);
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(6deg);
+}
+
+.inner-text-div {
+  height: 20%;
+  
+}
+
+.me-text-div p{
+  transform: rotate(-5deg);
+
+}
+.me-pics {
+  border: solid black 1px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 18px 4px var(--deepOcean);
+  margin: auto;
+  
+}
+
+
+#me-pic {
+  transform: rotate(-4deg) translatey(-140px);
+  height: 200px;
+  margin: 0px 12px 0px 0px;
+  }
+#kona-pic {
+  transform: rotate(-5deg) translatey(140px);
+  height: 140px;
+  margin: 0;
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------- */
 
 
 .projects-section {
@@ -301,8 +377,12 @@ animation: bg-animation 30s infinite;
 }
 
 .project-links-wrap p {
-  background-color: red;
+  /* background-color: red; */
   font-size: 10px;
+  /* border: solid black 2px;
+  border-radius: 3px; */
+  background-color: transparent;
+  margin-bottom: 9px;
 
 }
 
@@ -331,7 +411,7 @@ animation: bg-animation 30s infinite;
 /*--------------------------------------------------------------------------------------------------------- */
 
 .skillset-section {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--silverFox);
   color:var(--marksAndSparksGreen);
   border-bottom: solid white 4px;
@@ -460,11 +540,11 @@ animation: bg-animation 30s infinite;
 }
 
 .skills2:nth-child(2){
-  transition-delay: 3.8s;
+  transition-delay: 3.5s;
 }
 
 .skills2:nth-child(1){
-  transition-delay: 4.2s;
+  transition-delay: 4s;
 }
 
 .skillset-section h5:nth-child(4) {
@@ -475,13 +555,21 @@ animation: bg-animation 30s infinite;
   filter: blur(0);
 }
 
+.education-table {
+  height: 200px;
+  width: 60vw;
+  border: solid black 1px;
+  margin: 40px auto;
+}
+
 
 /* -------------------------------------------------------------------------------------------------------------------- */
 
 .contact-me-section {
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(110deg,#13612a, #15632c,var(--marksAndSparksGreen),#268b43, #1d6430, #0c421b);
   color: whitesmoke;
+  background-color: var(--marksAndSparksGreen);
   
  
 }
@@ -495,11 +583,22 @@ animation: bg-animation 30s infinite;
   max-width: 340px;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0px 0px 20px whitesmoke;
+  box-shadow: 0px 0px 18px 4px black;
+  border:  linear-gradient(110deg, #0a421b, #3bc765,);
+  border-style: outset;
+  border-width: 4px;
   border-radius: 8px;
   margin-bottom: 20px;
   text-align: left;
+  background: linear-gradient(110deg, 
+  #020f06,#062e12, #07160b,#092e13,  #06200e, #0c3117, #05250f, #10461e,#07200f, #093d1a,#04200d, rgb(9, 58, 29), rgb(4, 43, 25), rgb(3, 27, 12),  rgb(7, 58, 27),  rgb(4, 31, 8), rgb(8, 29, 20), rgb(10, 34, 20),  rgb(5, 17, 9),
+  #020f06,#062e12, #07160b,#092c13,  #06200e, #0c3117, #05250f, #10461e,#07200f, #093d1a,#04200d, rgb(9, 58, 29), rgb(4, 43, 25), rgb(3, 27, 12),  rgb(7, 58, 27),  rgb(4, 31, 8), rgb(8, 29, 20), rgb(10, 34, 20),  rgb(5, 17, 9)) ;
+
+  animation: form-animation   120s infinite;
+  background-size: 520%;
+  
 }
+
 /* .contact-form {
   width: 22vw;
 } */
@@ -554,10 +653,35 @@ label {
 #submit-button:hover {
   font-weight: 500;
   color: #000000;
-  background: #25645a;
+  background: #7ee2b0;
   transition:  .3s;
+
 }
 
+.connect-icons-div {
+ display:flex;
+ flex-direction: column;
+
+}
+
+.icon-div {
+  padding: 8px;
+}
+#git-hub-contact-icon {
+  width: 50px;
+  transform: translate(400px, -180px);
+}
+#git-hub-contact-icon:hover {
+  cursor :pointer;
+}
+
+#linkedIn-icon {
+  width: 50px;
+  transform: translate(400px, -180px);
+}
+#linkedIn-icon:hover {
+  cursor :pointer;
+}
 
 @keyframes typing {
   to { 
@@ -577,3 +701,17 @@ label {
   }
 }
 
+
+
+
+
+
+@keyframes form-animation {
+0% {background-position: left bottom}
+50% {background-position: right}
+100% {background-position: left}
+} 
+
+root{
+--newgrad:linear-gradient(45deg,#100b50, #420a34);
+}

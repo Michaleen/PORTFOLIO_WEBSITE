@@ -86,7 +86,7 @@ const bikeObserver2 = new IntersectionObserver((entries) => {
       }, 2500);
       setTimeout(function () {
         entry.target.classList.toggle('cruise-left', entry.isIntersecting)
-      }, 3500);
+      }, 3200);
       setTimeout(function () {
         entry.target.classList.remove('reveal-bike', entry.isIntersecting)
       }, 4500);
